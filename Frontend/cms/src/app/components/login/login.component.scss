@@ -1,0 +1,120 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+
+@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+$body-bg: rgb(58, 56, 56);
+
+$primary: #5c5c5c;
+$success: #1f8700;
+$warning: #ffc412;
+$danger: #870800;
+$secondary:#1a1a1a;
+$text-color: #d3d3d3;
+
+.font-size-h1{
+  font-size: 6.5vh;
+}
+
+.font-size-h2{
+  font-size: 4.5vh;
+}
+
+.font-size-h3{
+  font-size: 3vh;
+}
+
+.font-size-h4{
+  font-size: 2vh;
+}
+
+.bg-primary{
+  background-color: $primary!important;
+}
+.bg-success{
+  background-color: $success!important;
+}
+
+.bg-warning{
+  background-color: $warning!important;
+}
+
+.bg-danger{
+  background-color: $danger!important;
+}
+
+.bg-secondary{
+  background-color: $secondary!important;
+}
+
+.text-color{
+  color: $text-color;
+}
+
+.my-5{
+  margin-top: 2vh!important;
+  margin-bottom: 2vh!important;
+}
+
+.mt-5{
+  margin-top: 2vh!important;
+}
+
+.mb-5{
+  margin-bottom: 2vh!important;
+}
+
+.my-3{
+  margin-top: 1vh!important;
+  margin-bottom: 1vh!important;
+}
+
+.my-1{
+  margin-top: 0.5vh!important;
+  margin-bottom: 0.5vh!important;
+}
+
+.mb-4{
+  margin-bottom: 1.5vh!important;
+}
+
+.py-3{
+  padding-top: 0.75vh!important;
+  padding-bottom: 0.75vh!important;
+}
+
+.mx-4{
+  margin-left: 1.2vh!important;
+  margin-right: 1.2vh!important;
+}
+
+.m-5{
+  margin: 2vh!important;
+}
+
+.px-1
+{
+  padding-left: 0.5vh!important;
+  padding-right: 0.5vh!important;
+}
+
+.mt-6{
+  margin-top: 4vh!important;
+}
+
+.mx-xxl-4{
+  margin-left: 1.5vh!important;
+  margin-right: 1.5vh!important;
+}
+
+.mr-5{
+  margin-right: 1vh!important;
+}
+
+@include media-breakpoint-down(xxl) {
+  .mx-xxl-4{
+    margin-left: 0!important;
+    margin-right: 0!important;
+  }
+}

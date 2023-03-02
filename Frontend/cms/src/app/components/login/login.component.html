@@ -1,0 +1,17 @@
+<div class="font-size-h1 login-form">
+  <div class="text-center fw-bold mb-5">
+    Zaloguj się do panelu
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="login()" class="w-50 mx-auto align-items-center">
+    <input type="text" placeholder="Nazwa użytkownika" formControlName="username" class="form-control my-3 font-size-h1" />
+    <input type="password" placeholder="Hasło" formControlName="password" class="form-control my-3 font-size-h1 mb-5" />
+    <div class="text-center mt-5">
+      <button class="btn btn-primary font-size-h1 fw-bold  w-100" type="submit">Zaloguj</button>
+    </div>
+    <div class="alert alert-danger font-size-h1 mt-5" *ngIf="error">
+      Błędny login lub hasło
+    </div>
+  </form>
+</div>
+
+

@@ -1,0 +1,21 @@
+<section class="smart-scroll bg-dark">
+  <div class="container-fluid">
+      <nav class="navbar navbar-expand-md navbar-dark">
+          <a class="navbar-brand heading-black" href="index.html">
+            Knight
+          </a>
+          <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
+                  data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                  aria-label="Toggle navigation">
+              <span data-feather="grid"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav ml-auto">
+                  <li *ngFor="let item of menuItems" class="nav-item">
+                    <a class="nav-link page-scroll" href={{item.address}}>{{item.name}}</a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+  </div>
+</section>
