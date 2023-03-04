@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'cms_api.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'cms',
-        'USER': 'postgres',
-        'PASSWORD': '636107',
-        'HOST': 'localhost',
+        'USER': 'user',
+        'PASSWORD': 'pass',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }

@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  angular-app:
+    build: ./Frontend/cms
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./Frontend/cms/:/app/Frontend/cms
+    depends_on:
+      - django-app
+
+  django-app:
+    build: ./Backend/cms_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./Backend/cms_api/:/app/Backend/cms_api
+    depends_on:
+      - postgres
+
+  db:
+    image: postgres:latest
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ./.env.dev.db
+
+  postgres:
+    image: postgres:latest
+    volumes:
+      - ./Database:/tmp/backup_file
+    env_file:
+      - ./.env.dev.db
+    command: bash -c 'PGPASSWORD=pass psql -U user -h db -p 5432 cms < /tmp/backup_file/cms.sql'
+    depends_on:
+      - db
+volumes:
+  postgres_data:
