@@ -25,7 +25,7 @@ export class PagesService {
     const headers = new HttpHeaders({
       'Authorization': `Token ${localStorage.getItem('token')}`
     });
-    return this.http.post<any>(`${environment.api}/sections/`, section);
+    return this.http.post<any>(`${environment.api}/sections/`, section,{headers});
   }
   getAllSections(): Observable<any>{
     return this.http.get<any>(`${environment.api}/sections/`);
